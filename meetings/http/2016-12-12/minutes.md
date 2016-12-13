@@ -35,7 +35,7 @@ Notes:
 (3) Zewo uses structs for HTTP request and response, however the Body field is an enum. Where the enum is a stream, it is backed by a class.  
 
 _Let's assume we're going to re-use existing C libraries for HTTP 1.x and HTTP/2:_  
-* When doing a new implementation of existing functionality the new implementation is inherently going to have mode bugs, simply due to the lack of available time in the field and being "battle tested" (c.f. Apache Harmony vs existing Java Class Library code)
+* When doing a new implementation of existing functionality the new implementation is inherently going to have more bugs, simply due to the lack of available time in the field and being "battle tested" (c.f. Apache Harmony vs existing Java Class Library code)
 * There's also the additional effort to maintain and bug fix, and keep up with any new enhancements
 * In terms of performance, the only scope for a Swift implementation to really exceed a C implementation is likely around inlining (across the Swift/C boundary) and any type conversions (ie, across the C/Swift API boundary).
 * This allows us to concentrate efforts on developing the right Swift API - we can always subsequently go back and revisit the underlying implementation.
